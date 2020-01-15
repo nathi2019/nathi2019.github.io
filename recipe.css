@@ -54,4 +54,7 @@ span.strikethrough{
 ul{
     list-style-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif");
 }
-
+pre{
+    margin: 0;
+    padding: 0;
+}
