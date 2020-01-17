@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+	This question was quite tricky for me. It took about 30 minutes to figure out how to tackle it
+	finally, I was able to do it according to the following procedure.ß
+	This responsive design uses float. The responsiveness is acheived by actually reversing the order of
+	column 2 and column 3. And then column1 and 2 are floated left column 3 is floated right.
+	this gives us normal view on the normal screen mode.
+	When a screen gets below 600px the column 3 is floated to the right. this achives
+-->
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="responsive.css">
+	<title>Responsive Using Float</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="header">
+	<h2>Header</h2>
+</div>
+<div class="menu">
+	<ul>
+		<li>Menu1</li>
+		<li>Menu2</li>
+		<li>Menu3</li>
+	</ul>
+</div>
+
+<div class="row">
+	<div class="column1" style="background-color:#aaa;">Column1</div>
+	<div class="column3" style="background-color:#ccc;">Column3</div>
+	<div class="column2" style="background-color:#bbb;">Column2</div>
+	
+</div>
+
+<div class="footer">
+	<p>Footer</p>
+</div>
+
+</body>
+</html>
+
