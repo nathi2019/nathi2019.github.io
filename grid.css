@@ -17,17 +17,17 @@ body {
 
 /* Create three equal columns that floats next to each other */
 .column1 {
-    width: 33.33%;
+
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
 }
 .column2 {
-    width: 33.33%;
+
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
 }
 .column3 {
-    width: 33.33%;
+
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
 }
@@ -35,6 +35,7 @@ body {
 .row{
     display:grid;
     grid-template-columns: 33% 33% 33%;
+
 
 }
 
@@ -74,7 +75,6 @@ li {
     .column3 {
         grid-row: 1;
         grid-column: 2;
-        width: 50%;
     }
     .row{
         display: grid;
