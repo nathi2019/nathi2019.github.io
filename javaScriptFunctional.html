@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+	Re-Implementation of assignment 5 was quite interesting. This took me about 30 minutes to complete.
+	I have attempted all and completed. I have uploaded to my github page and this is my github
+
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Scipt</title>
+	<script>
+        function myFunctionTest(expected, found) {
+            if (expected === found) {
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + found;
+            }
+        }
+
+        /* Summing using reduce*/
+        function sumUsingReduce(arraOfNum){
+            let initialVal=0;
+            return arraOfNum.reduce((accumulator,currentVal)=>accumulator+currentVal,initialVal);
+        }
+        /*multiplyUsing reduce*/
+        function multiplyUsingReduce(arrOfNum) {
+            let intialVal=1;
+            return arrOfNum.reduce((accum,currentVal)=>accum*currentVal,intialVal);
+
+        }
+        function reverseString(str) {
+            return str==''?'':reverseString(str.substring(1))+str.charAt(0);
+        }
+		/* Reverse using map */
+        function reverseUsingMap(arrOfStrings) {
+            return arrOfStrings.map(reverseString);
+        }
+        /*filter longest word using filter*/
+        function filterUsingFilter(arrOfString, len) {
+            return arrOfString.filter((str,len)=>str.length>len);
+
+        }
+        function display() {
+            let span2 = document.getElementById("output3");
+            let span3 = document.getElementById("output4");
+            let span4 = document.getElementById("output5");
+            let span6 = document.getElementById("output7");
+            span2.innerHTML = "Q3:" + "SUM OF ARRAYS:: The Expected Output output of sumOfArray([23,8,45,-20,5]) is 61," + myFunctionTest(61, sumUsingReduce([23, 8, 45, -20, 5]));
+            span3.innerHTML = "Q4:" + "PRODUCT OF ARRAY ELEMENTS:: The Expected Output output of productOfArray([2, 8, 4,3, 5]) is 960," + myFunctionTest(960, multiplyUsingReduce([2, 8, 4, 3, 5]));
+            span4.innerHTML = "Q5:" + "REVERSE STRING:: The Expected Output output of reverse('JavaScript') is 'tpircSavaJ'," + myFunctionTest('tpircSavaJ', reverseUsingMap(["Banana", "Pineapple", "Dates", "Mango"]));
+            span6.innerHTML = "Q7:" + "FILTER ARRAY:: The Expected Output output of filterLongWords([Banana, Pinneaple,Dates,Mango],5) is Banana, Pinneaple," + myFunctionTest(["Banana", "Pineapple", "Dates", "Mango"], filterUsingFilter(["Banana", "Pineapple", "Dates", "Mango"],5));
+        }
+        console.log("SUM OF ARRAYS:: The Expected Output output of sumOfArray([23,8,45,-20,5]) is 61," + myFunctionTest(61, sumUsingReduce([23, 8, 45, -20, 5])));
+        console.log("PRODUCT OF ARRAY ELEMENTS:: The Expected Output output of productOfArray([2, 8, 4,3, 5]) is 960," + myFunctionTest(960, multiplyUsingReduce([2, 8, 4, 3, 5])));
+        console.log("REVERSE STRING:: The Expected Output output of reverse('JavaScript') is 'tpircSavaJ'," + myFunctionTest('tpircSavaJ', reverseUsingMap(["Banana", "Pineapple", "Dates", "Mango"])));
+        console.log("FILTER ARRAY:: The Expected Output output of filterLongWords([Banana, Pinneaple,Dates,Mango],6) is Pineapple," + myFunctionTest(["Banana","Pineapple"], filterUsingFilter(["Banana", "Pineapple", "Dates", "Mango"], 5)));
+	</script>
+</head>
+<body>
+<h1>Assignment on JavaScript</h1>
+<button onclick="display();">Click This Button to see all the answers</button><br/>
+<br/>
+<span id="output3">xxxxxxxx</span><br/>
+<span id="output4">xxxxxxxx</span><br/>
+<span id="output5">xxxxxxxx</span><br/>
+<span id="output7">xxxxxxxx</span><br/>
+</body>
+
+</html>
