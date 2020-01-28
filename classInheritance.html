@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+	though I have been reading this assignment a day before,  I have come across some difficulties. I think
+	this is due the lack of clarity of the questions. I was able to answer questions a, b and c easily .
+	However, question d is vogue. I understand it as if we need to create a Bank class on a separate js file
+	that has its own functions. i did write those but I could not link them to associated classes [CheckingAccount ,
+	SavingAccount and Account].
+	Because of this, I was not able to read deposits of each accounts and endOfMonth() method was not able to
+	generate the required output for each account!
+	-->
+
+<head>
+	<!-- add mocha css, to show results -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+	<!-- add mocha framework code -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+	<script>
+        mocha.setup('bdd'); // minimal setup
+	</script>
+	<!-- add chai -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+	<script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+	</script>
+	<script src="account.js"></script>
+	<script src="savingsAccount.js"></script>
+	<script src="checkingAccount.js"></script>
+	<script src="bank.js"></script>
+	<script src="test.js"></script>
+</head>
+<body>
+
+
+<!-- the script with tests (describe, it...) -->
+<!-- <script src="test.js"></script>
+<script src="calculatorTest.js"></script> -->
+
+<!-- the element with id="mocha" will contain test results -->
+<div id="mocha"></div>
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+<div id="validate">
+	<a href="https://validator.w3.org/check/referer">
+		<img src="w3c-html.png" alt="html validator">
+	</a><br>
+	<a href="https://jigsaw.w3.org/css-validator/check/referer">
+		<img src="w3c-css.png" alt="Valid CSS!"></a><br>
+	<a href="https://webster.cs.washington.edu/jslint?referer">
+		<img src="jslint.png" alt="JavaScript Lint">
+	</a>
+
+
+</div>
+</body>
+</html>
