@@ -1,0 +1,26 @@
+div.circle{
+    border-radius: 50em;
+}
+fieldset{
+
+    height: 230px;
+    width: 130px;
+    padding: 5px;
+    border-style: outset;
+    background: lightgray;
+}
+
+legend.leg{
+    font-family: Helvetica;
+    font-size:20px;
+    color: black;
+    font-weight: bold;
+
+}
+div.validator{
+    opacity: 80%;
+    position:fixed;
+    bottom: 0px;
+    right: 0px;
+
+}
